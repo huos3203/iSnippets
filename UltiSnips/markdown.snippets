@@ -7,4 +7,75 @@ updated: <#更新时间#>
 comments: true
 ---
 endsnippet
+##plantuml
+
+##elemnt
+snippet uml
+\`\`\`puml
+$1
+\`\`\`
+endsnippet
+	
+snippet uc
+	usecase
+endsnippet
+snippet ac
+	actor
+endsnippet
+snippet it
+	interface
+endsnippet
+snippet class
+	class ${1:name}{
+		- ${2:private}
+		# ${3:protectd}
+		+ ${4:public}
+	}
+endsnippet
+
+##relationship
+snippet bbt "接口协议：棒棒糖表示法" b
+	o--
+endsnippet
+snippet jc "继承"
+	<|--
+endsnippet
+snippet sx "实现接口"
+	<|..
+endsnippet
+snippet zh "合成：强拥有关系鸟*-->翅膀"
+	<--*
+endsnippet 
+snippet jh "聚合：弱拥有，雁群o-->大雁"
+	<--o
+endsnippet
+snippet gl "关联：气候<--企鹅"
+	-->
+endsnippet 
+snippet yl "依赖：氧气<..动物"
+	..>
+endsnippet
+#common
+snippet lr
+	left to right direction
+endsnippet
+snippet tb
+	top to bottom direction
+endsnippet
+snippet uclass "类声明" i
+class $1 as ${0:别名}{
+	
+	--属性组 --
+	${2:+} var $3:${4:String}=${5:\"\"}	
+	__ 函数组__
+	${6:+} func $7($7:$8,$9:$10)
+}
+endsnippet
+
+snippet unote "备注" i
+note ${1:left} of $2
+$3 
+end note
+endsnippet
+
 
