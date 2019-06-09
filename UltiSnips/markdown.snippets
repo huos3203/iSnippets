@@ -11,9 +11,9 @@ endsnippet
 ##elemnt
 snippet uml
 \`\`\`puml
-title ${1:uml模型图题目支持MD}
+title $1
 center header
-${2:描述}
+$2
 endheader
 \`\`\`
 endsnippet
@@ -54,37 +54,28 @@ snippet gg "创建新项目" b
 project starts `!v strftime("%Y-%m-%d")` 
 Sunday are closed
 Saturday are closed
-[${1:任务1}] as [${2:别名}] lasts ${3:2} days
+[$1] as [$2] lasts ${3:1} days
 endsnippet
 snippet gtask "创建新任务" b
-[${1:任务1}] as [${2:别名}] lasts ${3:2} days
+[$1] as [$2] lasts ${3:1} days
 endsnippet
 snippet gmile "创建里程碑" b
-[${1:里程碑}] happens at [${1:任务}]'s end
+[$1] happens at [$1]'s end
 endsnippet
 snippet gtl "任务安排" b
-[${1:task}] -> [${2:task2}]
+[$1] -> [$2]
 endsnippet
 
 ## 用例
 snippet guse "创建用例" b
-(${1:用例}) as ${2:别名}
+($1) as $2
 endsnippet
 snippet gact "角色" b
-:${1:角色}: as ${2:别名}
+:$1: as $2
 endsnippet
 ###用例关系
 snippet gul "连接用例和角色"
-${1:text} --> ${2:text}:${3:text}
-endsnippet
-snippet uc "用例"
-usecase ${1:user}
-endsnippet
-snippet ac "人形"
-actor ${1:}
-endsnippet
-snippet it "实例"
-interface ${1:实例}
+$1 --> $2:$3
 endsnippet
 
 ## 活动图
