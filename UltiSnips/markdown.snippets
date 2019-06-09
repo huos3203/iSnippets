@@ -1,9 +1,8 @@
 snippet title "博客简介" i
 ---
-title: <#标题#>
-subtitle: <#标题#>
-date: 创建时间
-updated: <#更新时间#>
+title: `!p snip.rv = snip.fn.split('.')[0]`
+date: `!v strftime("%Y-%m-%d %H:%M:%S%z")` 
+updated: `!v strftime("%Y-%m-%d %H:%M:%S%z")` 
 comments: true
 ---
 endsnippet
@@ -12,19 +11,13 @@ endsnippet
 ##elemnt
 snippet uml
 \`\`\`puml
-$1
+title ${1:uml模型图题目支持MD}
+center header
+${2:描述}
+endheader
 \`\`\`
 endsnippet
 	
-snippet uc
-	usecase
-endsnippet
-snippet ac
-	actor
-endsnippet
-snippet it
-	interface
-endsnippet
 snippet class
 	class ${1:name}{
 		- ${2:private}
@@ -35,26 +28,121 @@ endsnippet
 
 ##relationship
 snippet bbt "接口协议：棒棒糖表示法" b
-	o--
+${1:讲话} o-- ${2:唐老鸭}
 endsnippet
 snippet jc "继承"
-	<|--
+${1:基类} <|-- ${2:子类}
 endsnippet
 snippet sx "实现接口"
-	<|..
+${1:接口} <|.. ${2:实现}
 endsnippet
 snippet zh "合成：强拥有关系鸟*-->翅膀"
-	<--*
+${1:翅} *--> ${2:鸟}
 endsnippet 
 snippet jh "聚合：弱拥有，雁群o-->大雁"
-	<--o
+${1:雁群} o--> ${2:大雁}
 endsnippet
 snippet gl "关联：气候<--企鹅"
-	-->
+${1:气候} <-- ${2:企鹅}
 endsnippet 
 snippet yl "依赖：氧气<..动物"
-	..>
+${1:动物} ..> ${2:水}
 endsnippet
+
+##甘特图
+snippet gg "创建新项目" b
+project starts `!v strftime("%Y-%m-%d")` 
+Sunday are closed
+Saturday are closed
+[${1:任务1}] as [${2:别名}] lasts ${3:2} days
+endsnippet
+snippet gtask "创建新任务" b
+[${1:任务1}] as [${2:别名}] lasts ${3:2} days
+endsnippet
+snippet gmile "创建里程碑" b
+[${1:里程碑}] happens at [${1:任务}]'s end
+endsnippet
+snippet gtl "任务安排" b
+[${1:task}] -> [${2:task2}]
+endsnippet
+
+## 用例
+snippet guse "创建用例" b
+(${1:用例}) as ${2:别名}
+endsnippet
+snippet gact "角色" b
+:${1:角色}: as ${2:别名}
+endsnippet
+###用例关系
+snippet gul "连接用例和角色"
+${1:text} --> ${2:text}:${3:text}
+endsnippet
+snippet uc "用例"
+usecase ${1:user}
+endsnippet
+snippet ac "人形"
+actor ${1:}
+endsnippet
+snippet it "实例"
+interface ${1:实例}
+endsnippet
+
+## 活动图
+snippet ghuo "创建活动图" b
+start
+$1
+stop
+endsnippet
+snippet gif "条件分支" b
+if (${1:条件}) then
+	:${2:活动};
+elseif($3)
+	$4
+else($5)
+	$6
+endif
+endsnippet
+snippet gfork "并发分支" b
+fork
+$1
+fork again
+$2 
+end fork
+endsnippet
+snippet gwhile "循环分支" b
+repeat
+$1
+repeat while(${2:条件})
+endsnippet
+snippet gwhile "循环活动" b
+while (${1:条件}) is ($2)
+$3
+endwhile
+endsnippet
+snippet gswim "创建泳道" b
+|${1:泳道名}|
+:${2:活动}; 
+
+endsnippet
+## 时序图
+snippet gshx "创建时序图" b
+autonumber ${0:0}
+'actor,boundary,control,entity,database
+${1:actor} ${1:参与者} as ${2:别名}
+endsnippet
+snippet gsha "创建参与者" b
+${1:actor} ${1:参与者} as ${2:别名}
+endsnippet
+snippet gshmx "激活参与者" b
+activate ${1:参与者}
+$3
+deactivate ${2:参与者}
+endsnippet
+snippet gmsg "发送消息" b
+${1:参与者} --> ${2:参与者}:${3:消息}
+endsnippet
+
+
 #common
 snippet lr
 	left to right direction
