@@ -119,18 +119,18 @@ endsnippet
 snippet gshx "创建时序图" b
 autonumber ${0:0}
 'actor,boundary,control,entity,database
-${1:actor} ${1:参与者} as ${2:别名}
+${1:actor} $2 as $3
 endsnippet
 snippet gsha "创建参与者" b
-${1:actor} ${1:参与者} as ${2:别名}
+${1:actor} $2 as $3
 endsnippet
 snippet gshmx "激活参与者" b
-activate ${1:参与者}
+activate $1
 $3
-deactivate ${2:参与者}
+deactivate $2
 endsnippet
 snippet gmsg "发送消息" b
-${1:参与者} --> ${2:参与者}:${3:消息}
+$1 --> $2:$3
 endsnippet
 
 
