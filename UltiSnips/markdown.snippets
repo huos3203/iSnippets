@@ -61,17 +61,35 @@ snippet gg "创建新项目" b
 project starts `!v strftime("%Y-%m-%d")` 
 Sunday are closed
 Saturday are closed
-[$1] as [$2] lasts ${3:1} days
+--$0--
+[$1] as [$2] on \{${3:hsg:0%}\} lasts ${4:1} days
 endsnippet
 snippet ggt "创建新任务" b
-[$1] as [$2] lasts ${3:1} days
+[$1] as [$2] on \{${3:hsg:0%}\} lasts ${4:1} days
 endsnippet
+snippet ggtt "创建then关联任务"
+[$1] on \{${2:hsg:0%}\} lasts ${3:1} days
+then [$4] on \{${5:hsg:0%}\} lasts ${6:1} days
+endsnippet
+
+snippet ggp "分配人力资源"
+[$1] on \{${2:hsg:0%}\} lasts ${3:1} days
+endsnippet
+snippet ggtse "创建串行任务"
+[$1] starts at [$2]'s end
+endsnippet
+snippet ggtss "创建并行任务"
+[$1] starts at [$2]'s start
+endsnippet
+
+
 snippet ggm "创建里程碑" b
 [$1] happens at [$1]'s end
 endsnippet
 snippet ggtl "任务安排" b
 [$1] -> [$2]
 endsnippet
+
 
 ## 用例
 snippet guse "创建用例" b
