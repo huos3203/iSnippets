@@ -92,12 +92,25 @@ endsnippet
 
 
 ## 用例
-snippet guse "创建用例" b
+snippet guc "创建用例" b
 ($1) as $2
 endsnippet
-snippet gact "角色" b
+snippet gac "角色" b
 :$1: as $2
 endsnippet
+snippet gucd "支持描述的用例"
+usecase $1 as "
+__用例名__
+$2
+--id--
+$3
+==基础操作流程==
+$4
+..可选操作流程..
+$5
+"
+endsnippet
+	
 ###用例关系
 snippet gul "连接用例和角色"
 $1 --> $2:$3
