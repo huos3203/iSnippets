@@ -72,9 +72,14 @@ snippet ggtt "创建then关联任务"
 then [$4] on \{${5:hsg:0%}\} lasts ${6:1} days
 endsnippet
 
-snippet ggp "分配人力资源"
+snippet ggton "给who创建任务"
 [$1] on \{${2:hsg:0%}\} lasts ${3:1} days
 endsnippet
+
+snippet ggon "on分配到who"
+ on \{${2:hsg:0%}\} 
+endsnippet
+
 snippet ggtse "创建串行任务"
 [$1] starts at [$2]'s end
 endsnippet
