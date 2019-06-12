@@ -89,7 +89,7 @@ endsnippet
 
 
 snippet ggm "创建里程碑" b
-[$1] happens at [$1]'s end
+[$1] happens at [$2]'s end
 endsnippet
 snippet ggtl "任务安排" b
 [$1] -> [$2]
@@ -105,11 +105,9 @@ snippet gac "角色" b
 endsnippet
 snippet gucd "支持描述的用例"
 usecase $1 as "
-__用例名__
-$2
---id--
+==**$2**==
 $3
-==基础操作流程==
+--基础操作流程--
 $4
 ..可选操作流程..
 $5
@@ -183,3 +181,31 @@ endsnippet
 snippet tb
 	top to bottom direction
 endsnippet
+
+#文本样式
+snippet -- "删除线"
+--$0--
+endsnippet
+
+snippet __ "下划线"
+__$0__
+endsnippet
+
+snippet ~~ "波浪线"
+~~$0~~
+endsnippet
+
+snippet // "斜体"
+//$0//
+endsnippet
+
+snippet xb "下标体"
+"" ${VISUAL} ""
+endsnippet
+
+	
+
+	
+
+
+
