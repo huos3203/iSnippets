@@ -38,8 +38,6 @@ endsnippet
 ### 抽象类
 snippet gii "创建接口"
 interface "$1" as $0{
-	--属性组 --
-	${2:+} var $3:${4:String}=${5:""}	
 	__ 函数组__
 	${6:+} func $7($7:$8,$9:$10)
 
@@ -153,42 +151,43 @@ $1 --> $2:$3
 endsnippet
 
 ## 活动图
-snippet ghuo "创建活动图" b
+snippet gh "创建活动图" b
 start
-$1
+:$1;
+
 stop
 endsnippet
 snippet gif "条件分支" b
 if (${1:条件}) then
 	:${2:活动};
 elseif($3)
-	$4
+	:$4;
 else($5)
-	$6
+	:$6;
 endif
 endsnippet
 snippet gfork "并发分支" b
 fork
-$1
+:$1;
 fork again
-$2 
+:$2; 
 end fork
 endsnippet
 snippet gwhile "循环分支" b
 repeat
-$1
+:$1;
 repeat while(${2:条件})
 endsnippet
 snippet gwhile "循环活动" b
 while (${1:条件}) is ($2)
-$3
+:$3;
 endwhile
 endsnippet
 snippet gswim "创建泳道" b
-|${1:泳道名}|
-:${2:活动}; 
-
+|$1|
+:$2; 
 endsnippet
+
 ## 时序图
 snippet gsx "创建时序图" b
 autonumber ${0:0}
