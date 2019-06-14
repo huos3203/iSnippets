@@ -8,6 +8,8 @@ comments: true
 
 \`\`\`puml
 title `!p snip.rv = snip.fn.split('.')[0]`
+创建时间：%date[yyyy-MM-dd 'at' HH:mm]%
+endtitle
 left header
 $2
 endheader
@@ -253,6 +255,25 @@ snippet xb "下标体"
 "" ${VISUAL} ""
 endsnippet
 
+## 组件
+snippet gcom "组件"
+[$1] as $2
+endsnippet
+
+snippet ginter "接口"
+() "$1" as $2
+endsnippet
+
+	
+	
+
+## 通用图
+snippet gfold "分组"
+'package，node，folder，frame，cloud，database'
+package "$1" as $2{
+}
+endsnippet 
+	
 	
 
 	
