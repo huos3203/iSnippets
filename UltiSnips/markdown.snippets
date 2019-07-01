@@ -1,17 +1,21 @@
-snippet title "博客简介" i
+snippet hexo "博客简介" i
 ---
 title: `!p snip.rv = snip.fn.split('.')[0]`
 date: `!v strftime("%Y-%m-%d %H:%M:%S%z")` 
-updated: `!v strftime("%Y-%m-%d %H:%M:%S%z")` 
+updated: `!v strftime("%Y-%m-%d %H:%M:%S%z")`
 comments: true
+layout: post
+tags: []
+categories: iOS
 password: 1234
 copyright: true
 ---
 
 
 \`\`\`puml
-title `!p snip.rv = snip.fn.split('.')[0]`
-创建时间：%date[yyyy-MM-dd 'at' HH:mm]%
+title 
+`!p snip.rv = snip.fn.split('.')[0]`
+创建时间：`!v strftime("%Y-%m-%d %H:%M:%S%z")` 
 endtitle
 left header
 $2
@@ -23,7 +27,10 @@ endsnippet
 ##plantuml
 snippet uml
 \`\`\`puml
-title ${1:}
+title
+${1:}
+创建时间：`!v strftime("%Y-%m-%d %H:%M:%S%z")` 
+endtitle
 left header
 $2
 endheader
