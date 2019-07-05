@@ -105,22 +105,22 @@ project starts `!v strftime("%Y-%m-%d")`
 Sunday are closed
 Saturday are closed
 --组名--
-[$1] as [$2] on \{${3:hsg:0%}\} lasts ${4:1} days
+[$1] as [$2] on \{${3:hsg:100%}\} lasts ${4:1} days
 endsnippet
 snippet ggt "创建新任务" b
-[$1] as [$2] on \{${3:hsg:0%}\} lasts ${4:1} days
+[$1] as [$2] on \{${3:hsg:100%}\} lasts ${4:1} days
 endsnippet
 snippet ggtt "创建then关联任务"
-[$1] on \{${2:hsg:0%}\} lasts ${3:1} days
-then [$4] on \{${5:hsg:0%}\} lasts ${6:1} days
+[$1] on \{${2:hsg:100%}\} lasts ${3:1} days
+then [$4] on \{${5:hsg:100%}\} lasts ${6:1} days
 endsnippet
 
 snippet ggton "给who创建任务"
-[$1] on \{${2:hsg:0%}\} lasts ${3:1} days
+[$1] on \{${2:hsg:100%}\} lasts ${3:1} days
 endsnippet
 
 snippet ggon "on分配到who"
- on \{${2:hsg:0%}\} 
+ on \{${2:hsg:100%}\} 
 endsnippet
 
 snippet ggtse "创建串行任务"
