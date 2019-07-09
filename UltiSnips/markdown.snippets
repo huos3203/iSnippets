@@ -170,11 +170,11 @@ start
 stop
 endsnippet
 snippet gif "条件分支" b
-if (${1:条件}) then
+if (${1:条件}) then (YES)
 	:${2:活动};
 elseif($3)
 	:$4;
-else($5)
+else(NO)
 	:$6;
 endif
 endsnippet
