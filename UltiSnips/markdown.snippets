@@ -85,22 +85,22 @@ snippet bbt "接口协议：棒棒糖表示法" b
 ${1:讲话} o-- ${2:唐老鸭}
 endsnippet
 snippet jc "继承"
-${1:基类} <|-- ${2:子类}
+${1:基类} <|-- ${2:子类}:继承<
 endsnippet
 snippet sx "实现接口"
-${1:接口} <|.. ${2:实现}
+${1:接口} <|.. ${2:实现}:实现接口<
 endsnippet
 snippet hc "合成：强拥有关系鸟*-->翅膀"
-${1:翅} *--> ${2:鸟}
+${1:翅} *--> ${2:鸟}:合成<
 endsnippet 
 snippet jh "聚合：弱拥有，雁群o-->大雁"
-${1:雁群} o--> ${2:大雁}
+${1:雁群} o--> ${2:大雁}:聚合<
 endsnippet
 snippet gl "关联：气候<--企鹅"
-${1:气候} <-- ${2:企鹅}
+${1:气候} <-- ${2:企鹅}:关联<
 endsnippet 
 snippet yl "依赖：氧气<..动物"
-${1:动物} ..> ${2:水}
+${1:动物} ..> ${2:水}:依赖<
 endsnippet
 
 ##甘特图
@@ -111,7 +111,7 @@ Saturday are closed
 --组名--
 [$1] as [$2] on \{${3:hsg:100%}\} lasts ${4:1} days
 endsnippet
-snippet ggt "创建新任务" b
+snippet gtask "创建新任务" b
 [$1] as [$2] on \{${3:hsg:100%}\} lasts ${4:1} days
 endsnippet
 snippet gthen "创建then关联任务"
@@ -232,7 +232,36 @@ $1 ->o $2:$3
 endsnippet
 snippet gs/ "异步消息" b
 $1 -/ $2:$3
-endsnippet 
+endsnippet
+
+##脑图
+snippet xmind "支持脑图"
+\`\`\`puml
+@startmindmap
+caption ${1:说明文字}
+title ${2:标头}
+center header
+${3:头部描述}
+endheader
+* root node
+	* child node
+	*_ child2 node
+left side
+	* child left node
+	*_ child2 left node
+
+legend right
+${5:图例}
+endlegend
+
+center footer
+${4:页眉描述}
+endfooter
+@endmindmap
+\`\`\`
+
+endsnippet
+	
 	
 #common
 snippet lr
