@@ -13,7 +13,8 @@ copyright: true
 
 
 \`\`\`puml
-page 1x1
+scale 2
+page 2x1
 title 
 `!p snip.rv = snip.fn.split('.')[0]`
 创建时间：`!v strftime("%Y-%m-%d %H:%M:%S%z")` 
@@ -28,6 +29,8 @@ endsnippet
 ##plantuml
 snippet uml
 \`\`\`puml
+scale 2
+page 1x1
 title
 ${1:}
 创建时间：`!v strftime("%Y-%m-%d %H:%M:%S%z")` 
@@ -111,31 +114,26 @@ endsnippet
 snippet ggt "创建新任务" b
 [$1] as [$2] on \{${3:hsg:100%}\} lasts ${4:1} days
 endsnippet
-snippet ggtt "创建then关联任务"
-[$1] on \{${2:hsg:100%}\} lasts ${3:1} days
-then [$4] on \{${5:hsg:100%}\} lasts ${6:1} days
+snippet gthen "创建then关联任务"
+then [$1] on \{${2:hsg:100%}\} lasts ${3:1} days
 endsnippet
 
-snippet ggton "给who创建任务"
-[$1] on \{${2:hsg:100%}\} lasts ${3:1} days
-endsnippet
-
-snippet ggon "on分配到who"
+snippet gwho "on分配到who"
  on \{${2:hsg:100%}\} 
 endsnippet
 
-snippet ggtse "创建串行任务"
+snippet gend "创建串行任务"
 [$1] starts at [$2]'s end
 endsnippet
-snippet ggtss "创建并行任务"
+snippet gstart "创建并行任务"
 [$1] starts at [$2]'s start
 endsnippet
 
 
-snippet ggm "创建里程碑" b
+snippet gmile "创建里程碑" b
 [$1] happens at [$2]'s end
 endsnippet
-snippet ggtl "任务安排" b
+snippet glink "安排任务顺序" b
 [$1] -> [$2]
 endsnippet
 
