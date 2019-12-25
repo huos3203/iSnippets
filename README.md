@@ -1,7 +1,7 @@
 
 安装
 ```
-Plug 'huos3203/iSnippets'
+Plug 'it-boyer/iSnippets'
 ```
 
 自定义uml.snippets，在test.uml文件不生效。
